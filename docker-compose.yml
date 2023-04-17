@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: ha-video-parser:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: parser:parser
+    volumes:
+      - .:/app
+    tty: true
