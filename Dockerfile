@@ -6,5 +6,6 @@ ENV PATH="$PATH:/usr/local/go/bin"
 
 RUN adduser -D -g parser parser
 
-RUN  sh /features/go/install.sh
-RUN  sh /features/ffmpeg/install.sh
+RUN  /features/go/install.sh \
+     && /features/ffmpeg/install.sh \
+     && /features/imagemagick/install.sh
